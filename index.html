@@ -1414,11 +1414,15 @@
               <div class="row gy-4">
 
 
-                <div class="col-md-12 field">
-                  <textarea type="text" name="message" id="message"   class="form-control"  rows="6" placeholder="Enter Your feedback" required=""></textarea>
+                <div class="col-md-12 ">
+                  <div class="field">
+                    <textarea type="text" name="message" id="message" class="form-control" rows="6"  placeholder="Enter Your feedback"></textarea>
+                  </div>
+                  <!-- <textarea name="reply_to" id="reply_to" class="form-control" name="message" rows="6" placeholder="Enter Your feedback" required=""></textarea> -->
                 </div>
 
                 <div class="col-md-12 text-center">
+                  <!-- <input type="submit" id="button" value="Send Email" > -->
                   <input type="submit" id="button" value="Send Your Feedback" >
                 </div>
 
@@ -1455,8 +1459,10 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
+ 
   <!-- Vendor JS Files -->
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/php-email-form/validate.js"></script>
   <script src="vendor/aos/aos.js"></script>
@@ -1464,12 +1470,14 @@
   <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
-
+  <script type="text/javascript">
+    emailjs.init('esXcml-OPQ3wOm-73')
+  </script>
   <!-- Main JS File -->
   <script src="js/main.js"></script>
 
   <script>
-const btn = document.getElementById('button');
+        const btn = document.getElementById('button');
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
